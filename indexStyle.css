@@ -1,0 +1,104 @@
+/**********GENERAL CONTENT STYLING***************/
+body {
+  background-color: hsl(0, 0%, 98%);
+}
+
+* {
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+  font-weight: 200;
+  box-sizing: border-box;
+}
+
+/*****************STYLING FOR THE MAIN HEADER**********************/
+.mainHeader,
+.headerText {
+  text-align: center;
+}
+
+.mainHeader,
+.spanHead {
+  font-size: 30px;
+}
+
+.spanHead,
+h2 {
+  font-weight: 600;
+}
+
+/******************STYLING FOR THE FOUR MAIN BOXES**********************/
+.supervisorContainer,
+.teamBuilderContainer,
+.karmaContainer,
+.calculatorContainer {
+  padding: 1rem;
+  border-top: solid 4px;
+  border-radius: 15px;
+  box-shadow: 0px 6px 5px 2px hsl(229, 6%, 66%);
+}
+
+.supervisorContainer {
+  border-color: hsl(180, 62%, 55%);
+}
+
+.teamBuilderContainer {
+  border-color: hsl(0, 78%, 62%);
+}
+
+.karmaContainer {
+  border-color: hsl(34, 97%, 64%);
+}
+
+.calculatorContainer {
+  border-color: hsl(212, 86%, 64%);
+}
+
+.mainContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: minmax(10rem, auto);
+  grid-gap: 2rem;
+  max-width: 80%;
+  margin: auto;
+  margin-bottom: 4rem;
+}
+
+.karmaContainer {
+  grid-column: 2/3;
+  grid-row: 2;
+}
+
+.supervisorContainer {
+  position: relative;
+  top: 50%;
+}
+
+.calculatorContainer {
+  position: relative;
+  top: 50%;
+}
+
+/***************************IMAGE POSITIONING********************/
+img {
+  float: right;
+}
+
+/***************************FOOTER STYLING**********************/
+.attribution {
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/*********************mobile design styling ********************/
+@media screen and (max-width: 600px) {
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    max-width: 70%;
+    margin: auto;
+    margin-bottom: 4rem;
+  }
+}
