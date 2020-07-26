@@ -17,51 +17,27 @@ body {
   margin: auto;
 }
 
-.mainHeader {
-  font-size: 1.9rem;
-}
-
-.spanHead {
+.mainHeader1,
+.mainHeader2 {
   font-size: 2rem;
+  margin: 0 auto;
 }
 
-.spanHead,
+.mainHeader2,
 h2 {
   font-weight: 600;
 }
 
+.headerText {
+  max-width: 45%;
+  margin: auto;
+  font-weight: 400px;
+}
+
 /******************STYLING FOR THE FOUR MAIN BOXES**********************/
-.supervisorContainer,
-.teamBuilderContainer,
-.karmaContainer,
-.calculatorContainer {
-  width: 300px;
-  height: 250px;
-  padding: 1.5rem;
-  border-top: solid 4px;
-  border-radius: 15px;
-  box-shadow: 0px 6px 5px 2px hsl(229, 6%, 66%);
-  word-wrap: break-word;
-  margin: 10px;
-}
-
-.supervisorContainer {
-  border-color: hsl(180, 62%, 55%);
-}
-
-.teamBuilderContainer {
-  border-color: hsl(0, 78%, 62%);
-}
-
-.karmaContainer {
-  border-color: hsl(34, 97%, 64%);
-}
-
-.calculatorContainer {
-  border-color: hsl(212, 86%, 64%);
-}
-
 .mainContainer {
+  max-width: 90%;
+  margin: auto;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -71,7 +47,47 @@ h2 {
 .buildAndKarmaContainer {
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
+  justify-content: center;
+  flex: 1 300px;
+}
+
+.supervisor,
+.calculator {
+  height: 250px;
+  padding: 1.5rem;
+  border-top: solid 4px;
+  border-radius: 15px;
+  box-shadow: 0px 6px 5px 2px hsl(229, 6%, 66%);
+  word-wrap: break-word;
+  margin: 10px;
+  flex: 1 300px;
+}
+
+.teamBuild,
+.karma {
+  height: 250px;
+  padding: 1.5rem;
+  border-top: solid 4px;
+  border-radius: 15px;
+  box-shadow: 0px 6px 5px 2px hsl(229, 6%, 66%);
+  word-wrap: break-word;
+  margin: 10px;
+}
+
+.supervisor {
+  border-color: hsl(180, 62%, 55%);
+}
+
+.teamBuild {
+  border-color: hsl(0, 78%, 62%);
+}
+
+.karma {
+  border-color: hsl(34, 97%, 64%);
+}
+
+.calculator {
+  border-color: hsl(212, 86%, 64%);
 }
 
 /***************************IMAGE POSITIONING********************/
@@ -89,18 +105,37 @@ img {
 }
 
 /*********************mobile design styling ********************/
-@media screen and (max-width: 992px) and (min-width: 639px) {
+@media screen and (max-width: 1074px) and (min-width: 639px) {
+  .headerText {
+    max-width: 80%;
+  }
+
   .mainContainer {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
   }
 
-  .supervisorContainer,
-  .teamBuilderContainer,
-  .karmaContainer,
-  .calculatorContainer {
-    width: 600px;
-    height: 250px;
+  .supervisor,
+  .calculator,
+  .buildAndKarmaContainer {
+    width: 80%;
+  }
+
+  .teamBuild,
+  .karma {
+    margin: 10px 0px;
+    flex: 1 300px;
+  }
+}
+
+@media screen and (max-width: 638px) {
+  .headerText {
+    max-width: 100%;
+  }
+
+  .mainHeader1,
+  .mainHeader2 {
+    font-size: 1.5rem;
   }
 }
